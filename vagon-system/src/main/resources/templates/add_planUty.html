@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+	<title>O'zvagonta'mir</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		numberegrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm col-md col-lg container justify-content-center card">
+				<hr>
+				<div class="container bg-yellow d-flex justify-content-center text-black">
+					<h1 >Rejani kiritish</h1>
+				</div>
+				<hr><hr>
+				<form th:action="@{/vagons/savePlanUty}" th:object="${planDto}" method="POST">
+					
+					<div class="justify-content-center row">
+						<h3>Depoli ta’mir(ДР)</h3>
+					</div>
+					
+
+					<div class="row">
+					<h5 >VCHD-3</h5>
+						<div class="form-group col">
+							<label>Yopiq vagon (крыт)</label>
+							<input type="number" min="0" value="0" th:field="*{havDtKritiPlan}" class="form-control"/>
+						</div>
+						<div class="form-group col">
+							<label>Platforma(пф)</label>
+							<input type="number" min="0" value="0" th:field="*{havDtPlatformaPlan}" class="form-control"/>
+						</div>
+						<div class="form-group col">
+							<label>Yarim ochiq vagon(пв)</label>
+							<input type="number" min="0" value="0" th:field="*{havDtPoluvagonPlan}" class="form-control"/>
+						</div>
+						<div class="form-group col">
+							<label>Sisterna(цс)</label>
+							<input type="number" min="0" value="0" th:field="*{havDtSisternaPlan}" class="form-control"/>
+						</div>
+						<div class="form-group col">
+							<label>Boshqa turdagi(проч)</label>
+							<input type="number" min="0" value="0" th:field="*{havDtBoshqaPlan}" class="form-control"/>
+						</div>
+					</div>
+					<div class="row">
+					<h5 >VCHD-5</h5>
+						<div class="form-group col">
+							<label>Yopiq vagon (крыт)</label>
+							<input type="number" min="0" value="0" th:field="*{andjDtKritiPlan}" class="form-control"/>
+						</div>
+						<div class="form-group col">
+							<label>Platforma(пф)</label>
+							<input type="number" min="0" value="0" th:field="*{andjDtPlatformaPlan}" class="form-control"/>
+						</div>
+						<div class="form-group col">
+							<label>Yarim ochiq vagon(пв)</label>
+							<input type="number" min="0" value="0" th:field="*{andjDtPoluvagonPlan}" class="form-control"/>
+						</div>
+						<div class="form-group col">
+							<label>Sisterna(цс)</label>
+							<input type="number" min="0" value="0" th:field="*{andjDtSisternaPlan}" class="form-control" />
+						</div>
+						<div class="form-group col">
+							<label>Boshqa turdagi(проч)</label>
+							<input type="number" min="0" value="0" th:field="*{andjDtBoshqaPlan}" class="form-control"/>
+						</div>			
+					</div>
+					<div class="row">
+						<h5 >VCHD-6</h5>
+						<div class="form-group col">
+							<label>Yopiq vagon (крыт)</label>
+							<input type="number" min="0" value="0" th:field="*{samDtKritiPlan}" class="form-control" />
+						</div>
+						<div class="form-group col">
+							<label>Platforma(пф)</label>
+							<input type="number" min="0" value="0" th:field="*{samDtPlatformaPlan}" class="form-control"/>
+						</div>
+						<div class="form-group col">
+							<label>Yarim ochiq vagon(пв)</label>
+							<input type="number" min="0" value="0" th:field="*{samDtPoluvagonPlan}" class="form-control"/>
+						</div>
+						<div class="form-group col">
+							<label>Sisterna(цс)</label>
+							<input type="number" min="0" value="0" th:field="*{samDtSisternaPlan}" class="form-control"/>
+						</div>
+						<div class="form-group col">
+							<label>Boshqa turdagi(проч)</label>
+							<input type="number" min="0" value="0" th:field="*{samDtBoshqaPlan}" class="form-control"/>
+						</div>
+					</div>
+					
+					<div class="justify-content-center row">
+						<h3>Kapital ta'mir(КР)</h3>
+					</div>
+					
+
+					<div class="row">
+					<h5 >VCHD-3</h5>
+						<div class="form-group col">
+							<label> Yopiq vagon (крыт)</label>
+							<input  type="number" min="0" value="0" th:field="*{havKtKritiPlan}" class="form-control" />
+						</div>
+						<div class="form-group col">
+							<label>Platforma(пф)</label>
+							<input  type="number" min="0" value="0" th:field="*{havKtPlatformaPlan}" class="form-control" />
+						</div>
+						<div class="form-group col">
+							<label>Yarim ochiq vagon(пв)</label>
+							<input  type="number" min="0" value="0" th:field="*{havKtPoluvagonPlan}" class="form-control" />
+						</div>
+						<div class="form-group col">
+							<label>Sisterna(цс)</label>
+							<input  type="number" min="0" value="0" th:field="*{havKtSisternaPlan}" class="form-control"/>
+						</div>
+						<div class="form-group col">
+							<label>Boshqa turdagi(проч)</label>
+							<input  type="number" min="0" value="0" th:field="*{havKtBoshqaPlan}" class="form-control" />
+						</div>			
+					</div>
+					<div class="row">
+					<h5 >VCHD-5</h5>
+						<div class="form-group col">
+							<label>Yopiq vagon (крыт)</label>
+							<input  type="number" min="0" value="0" th:field="*{andjKtKritiPlan}" class="form-control" />
+						</div>
+						<div class="form-group col">
+							<label>Platforma(пф)</label>
+							<input  type="number" min="0" value="0" th:field="*{andjKtPlatformaPlan}" class="form-control" />
+						</div>
+						<div class="form-group col">
+							<label>Yarim ochiq vagon(пв)</label>
+							<input  type="number" min="0" value="0" th:field="*{andjKtPoluvagonPlan}" class="form-control"/>
+						</div>
+						<div class="form-group col">
+							<label>Sisterna(цс)</label>
+							<input  type="number" min="0" value="0" th:field="*{andjKtSisternaPlan}" class="form-control" />
+						</div>
+						<div class="form-group col">
+							<label>Boshqa turdagi(проч)</label>
+							<input  type="number" min="0" value="0" th:field="*{andjKtBoshqaPlan}" class="form-control" />
+						</div>			
+					</div>
+					<div class="row">
+						<h5 >VCHD-6 </h5>
+						<div class="form-group col">
+							<label>Yopiq vagon (крыт)</label>
+							<input type="number" min="0" value="0" th:field="*{samKtKritiPlan}" class="form-control"/>
+						</div>
+						<div class="form-group col">
+							<label>Platforma(пф)</label>
+							<input type="number" min="0" value="0" th:field="*{samKtPlatformaPlan}" class="form-control" />
+						</div>
+						<div class="form-group col">
+							<label>Yarim ochiq vagon(пв)</label>
+							<input type="number" min="0" value="0" th:field="*{samKtPoluvagonPlan}" class="form-control"/>
+						</div>
+						<div class="form-group col">
+							<label>Sisterna(цс)</label>
+							<input type="number" min="0" value="0" th:field="*{samKtSisternaPlan}" class="form-control" />
+						</div>
+						<div class="form-group col">
+							<label>Boshqa turdagi(проч)</label>
+							<input  type="number" min="0" value="0" th:field="*{samKtBoshqaPlan}" class="form-control"
+							/>
+						</div>
+					</div>
+					
+									
+					<div class="justify-content-center row">
+						<h3>KRP(КРП)</h3>
+					</div>
+					
+
+					<div class="row">
+					<h5 >VCHD-3</h5>
+						<div class="form-group col">
+							<label>Yopiq vagon (крыт)</label>
+							<input  type="number" min="0" value="0" th:field="*{havKrpKritiPlan}" class="form-control"/>
+						</div>
+						<div class="form-group col">
+							<label>Platforma(пф)</label>
+							<input  type="number" min="0" value="0" th:field="*{havKrpPlatformaPlan}" class="form-control" />
+						</div>
+						<div class="form-group col">
+							<label>Yarim ochiq vagon(пв)</label>
+							<input  type="number" min="0" value="0" th:field="*{havKrpPoluvagonPlan}" class="form-control"/>
+						</div>
+						<div class="form-group col">
+							<label>Sisterna(цс)</label>
+							<input  type="number" min="0" value="0" th:field="*{havKrpSisternaPlan}" class="form-control"/>
+						</div>
+						<div class="form-group col">
+							<label>Boshqa turdagi(проч)</label>
+							<input  type="number" min="0" value="0" th:field="*{havKrpBoshqaPlan}" class="form-control"/>
+						</div>			
+					</div>
+					<div class="row">
+					<h5 >VCHD-5</h5>
+						<div class="form-group col">
+							<label>Yopiq vagon (крыт)</label>
+							<input  type="number" min="0" value="0" th:field="*{andjKrpKritiPlan}" class="form-control"/>
+						</div>
+						<div class="form-group col">
+							<label>Platforma(пф)</label>
+							<input  type="number" min="0" value="0" th:field="*{andjKrpPlatformaPlan}" class="form-control"/>
+						</div>
+						<div class="form-group col">
+							<label>Yarim ochiq vagon(пв)</label>
+							<input  type="number" min="0" value="0" th:field="*{andjKrpPoluvagonPlan}" class="form-control"/>
+						</div>
+						<div class="form-group col">
+							<label>Sisterna(цс)</label>
+							<input  type="number" min="0" value="0" th:field="*{andjKrpSisternaPlan}" class="form-control"/>
+						</div>
+						<div class="form-group col">
+							<label>Boshqa turdagi(проч)</label>
+							<input  type="number" min="0" value="0" th:field="*{andjKrpBoshqaPlan}" class="form-control" />
+						</div>			
+					</div>
+					<div class="row">
+						<h5 >VCHD-6</h5>
+						<div class="form-group col">
+							<label>Yopiq vagon (крыт)</label>
+							<input  type="number" min="0" value="0" th:field="*{samKrpKritiPlan}" class="form-control" />
+						</div>
+						<div class="form-group col">
+							<label>Platforma(пф)</label>
+							<input  type="number" min="0" value="0" th:field="*{samKrpPlatformaPlan}" class="form-control" />
+						</div>
+						<div class="form-group col">
+							<label>Yarim ochiq vagon(пв)</label>
+							<input  type="number" min="0" value="0" th:field="*{samKrpPoluvagonPlan}" class="form-control" />
+						</div>
+						<div class="form-group col">
+							<label>Sisterna(цс)</label>
+							<input  type="number" min="0" value="0" th:field="*{samKrpSisternaPlan}" class="form-control" />
+						</div>
+						<div class="form-group col">
+							<label>Boshqa turdagi(проч)</label>
+							<input  type="number" min="0" value="0" th:field="*{samKrpBoshqaPlan}" class="form-control" />
+						</div>
+					</div>
+
+					<div class="box-footer justify-content-center row">
+						<button class="btn btn-primary btn-block col-5" type="submit">Saqlash</button>
+						<a th:href="@{/vagons/AllPlanTableUty}" class=" btn btn-danger col-5" >Ortga</a>	
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	</div>
+</body>
+
+</html>
